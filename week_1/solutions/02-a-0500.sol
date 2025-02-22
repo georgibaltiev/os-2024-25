@@ -8,5 +8,4 @@ cd practice-test/test1
 touch test.txt
 
 # Преместваме го извън test1
-
 mv test.txt ..
