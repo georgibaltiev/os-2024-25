@@ -5,7 +5,7 @@
 ---
 
 cd dir/a/b/d
-ln -s ../target.txt link_d
+ln -s ../../target.txt link_d
 
 ---
 
