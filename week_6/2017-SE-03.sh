@@ -18,7 +18,7 @@ while read user; do
     while read pid; do
         
         # тук правим само dry-run, за да не се налага да извикваме истинската команда
-        echo "kill -9 ${pid}"
+        echo "kill ${pid}"
 
     # създаваме списък от процесите на конкретния user, които имат поне двойно повече потребление на физическа памет от средното им
     done < <(cat "${snapshot}" | awk -v usr="${user}" '$1 == usr' | awk -v avg="${avg_rss}" '$2 > 2 * avg {print $3}')
