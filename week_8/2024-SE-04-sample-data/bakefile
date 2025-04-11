@@ -1,0 +1,6 @@
+
+first.txt: a.txt b.txt: paste a.txt b.txt > first.txt
+second.txt: c.txt d.txt: paste c.txt d.txt > second.txt
+
+res.txt: first.txt second.txt: paste first.txt second.txt > res.txt
+
