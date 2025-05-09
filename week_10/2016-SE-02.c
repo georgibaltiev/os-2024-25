@@ -96,8 +96,9 @@ int main(int argc, char* argv[]) {
     pair p;
 
     while(wrapped_read(fd1, &p, sizeof(p)) > 0) {
-        
-        if (p.offset + p.length > size2) {
+
+        // Тук има грешка - поправена е на 09/05/25 - изпуснато е умножението на offset-а по sizeof()
+        if (((p.offset + p.length) * sizeof(uint32_t)) > size2) {
             errx(1, "Invalid offset of %s", argv[1]);
         }
     }
